@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tercera opcion</title>
+</head>
+<body>
+    <h1>Realizacion de la matriz</h1>
+
+    <p>Nota: no me aceptan  algunos valores</p>
+
+
+    <script>
+         
+         // creo la matriz
+        let matriz = function(A) {
+        let arr = [], contador = 1;
+  for (let i = 0; i < A; i++) {
+    let numeros = []
+    for (let j = 0; j < A; j++) {
+      numeros.push(0)
+    }
+    arr.push(numeros)
+  }
+ // creo la matriz espiral
+  let matrizEspiral= function(arr) {
+    if (arr.length > 1) {
+      for (let i = 0; i < arr[0].length; i++) {
+        arr[0][i] = contador ++;
+      }
+    }
+    return arr
+  }
+  return matrizEspiral(arr)
+}
+   console.log(matriz(5))
+    
+
+    </script>
+</body>
+</html>
