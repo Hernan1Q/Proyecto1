@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+    <script>
+    // creo matriz
+
+         let Matriz = function(A) {
+  let arr = [],
+    contador = 1;
+  for (let i = 0; i < A; i++) {
+    let items = [];
+    for (let j = 0; j < A; j++) {
+      items.push(0);
+    }
+    arr.push(items);
+  }
+
+  var espiralMatriz = function(arr) {
+    let contador = 1;
+    let k = 0; // empieza la fila
+    let m = arr.length; // finalia la fila
+    let l = 0; // empieza la columna 
+    let n = arr[0].length; // finaliza la columna
+
+    while (k < m && l < n) {
+    
+      for (var i = l; i < n; i++) {
+        arr[k][i] = contador;
+        contador++;
+      }
+      k++;
+
+      
+      for (var i = k; i < m; i++) {
+        arr[i][n - 1] = contador;
+        contador++;
+      }
+      n--;
+
+  
+      if (k < m) {
+        for (var i = n - 1; i >= l; i--) {
+          arr[m - 1][i] = contador;
+          contador++;
+        }
+        m--;
+      }
+
+    
+      if (l < n) {
+        for (var i = m - 1; i >= k; i--) {
+          arr[i][l] = contador;
+          contador++;
+        }
+        l++;
+      }
+    }
+    return arr;
+  };
+  return espiralMatriz(arr);
+};
+
+console.log(Matriz(4));
+ 
+
+    </script>
+</body>
+
+</html>
